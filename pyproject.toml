@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morseq"
+version = "0.1.0"
+description = "Morse sequences and topological image segmentation: stable/unstable sets, basins, stacks and cuts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Kévin Feltrin", email = "kevin.feltrin@edu.esiee.fr"}]
+keywords = ["discrete Morse theory", "Morse sequences", "image segmentation",
+            "watershed", "computational topology", "cubical complex"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5", "numpy>=1.20"]
+dev = ["pytest>=7", "matplotlib>=3.5", "numpy>=1.20"]
+
+[project.urls]
+Homepage = "https://github.com/KvnFltr/morseq"
+Issues = "https://github.com/KvnFltr/morseq/issues"
+
+[project.scripts]
+morseq = "morseq.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["morseq*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
