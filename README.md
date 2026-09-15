@@ -154,12 +154,6 @@ morseq check --shape 6x5 --trials 50
   arXiv:2509.01384.
 * R. Forman. *Morse theory for cell complexes.* Adv. Math. 134, 90–145, 1998.
 
-## Citing
-
-This library accompanies a research internship report on Morse sequences and
-image segmentation (ESIEE Paris, Université Gustave Eiffel, LIGM, 2026),
-supervised by Gilles Bertrand, Jean Cousty and Laurent Najman.
-
 ## License
 
 MIT — see [LICENSE](LICENSE).
