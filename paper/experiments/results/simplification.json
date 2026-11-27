@@ -1,0 +1,71 @@
+{
+  "size": 64,
+  "wells": 6,
+  "noise": 7,
+  "shown": 12,
+  "curve": [
+    {
+      "threshold": 0,
+      "minima": 662
+    },
+    {
+      "threshold": 2,
+      "minima": 457
+    },
+    {
+      "threshold": 4,
+      "minima": 235
+    },
+    {
+      "threshold": 6,
+      "minima": 101
+    },
+    {
+      "threshold": 8,
+      "minima": 23
+    },
+    {
+      "threshold": 10,
+      "minima": 7
+    },
+    {
+      "threshold": 12,
+      "minima": 6
+    },
+    {
+      "threshold": 14,
+      "minima": 6
+    },
+    {
+      "threshold": 16,
+      "minima": 6
+    },
+    {
+      "threshold": 20,
+      "minima": 5
+    },
+    {
+      "threshold": 24,
+      "minima": 5
+    },
+    {
+      "threshold": 32,
+      "minima": 5
+    },
+    {
+      "threshold": 40,
+      "minima": 4
+    }
+  ],
+  "cancellations": 658,
+  "seconds": 176.0,
+  "checks": {
+    "stack": true,
+    "raised_only": true,
+    "level_flat": true,
+    "acyclic": true,
+    "flooding": true,
+    "basins": 4,
+    "remaining_pairs_min_persistence": 44
+  }
+}

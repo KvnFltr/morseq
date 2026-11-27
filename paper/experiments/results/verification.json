@@ -1,0 +1,26 @@
+{
+  "rws": {
+    "images": 830,
+    "cells": 347810,
+    "differences": 0
+  },
+  "cancellation": {
+    "stacks": 300,
+    "pairs": 33109,
+    "not_flat_for_F": 31677,
+    "flat_raised": 33109,
+    "flat_lowered": 33109,
+    "flooding": 33109,
+    "acyclic": 33109,
+    "min_saddle_merges": 9736,
+    "merge_ok": 9736
+  },
+  "segmentation": {
+    "sequences": 220,
+    "cells": 65820,
+    "closure_equals_scan": 220,
+    "bridges_equal_saddle_stable_sets": 220,
+    "existence_strictly_larger": 104
+  },
+  "seconds": 2757.2
+}
