@@ -5,3 +5,13 @@ build/
 dist/
 .pytest_cache/
 examples/*.png
+
+# paper build and experiment logs
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.synctex.gz
+paper/experiments/*.log
+paper/experiments/results/*.png

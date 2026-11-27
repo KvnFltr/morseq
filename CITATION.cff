@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "morseq: Morse sequences and topological image segmentation"
+type: software
+authors:
+  - family-names: Feltrin
+    given-names: Kévin
+version: 0.3.0
+license: MIT
+repository-code: "https://github.com/KvnFltr/morseq"
+keywords:
+  - discrete Morse theory
+  - Morse sequences
+  - image segmentation
+  - watershed
+  - computational topology

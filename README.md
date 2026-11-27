@@ -78,7 +78,10 @@ On Windows, if `pip` warns that the scripts directory is not on `PATH`, use
 | Morse skeleton | `morse_skeleton` | DFRS 2015, Sec. 3.2 |
 | Basins | `basin` | DFRS 2015, Sec. 3.3 |
 | **Basins, one-pass labeling** | `basins`, `basin_sets` | this work |
-| Bridges | `bridges` | DFRS 2015, Sec. 3.3 |
+| Bridges (= stable sets of critical edges) | `bridges` | DFRS 2015, Sec. 3.3; this work |
+| Cancellation of a critical pair | `cancel` | Forman 1998, Sec. 11 |
+| Stacks compatible with a cancellation | `raise_stack`, `lower_stack` | this work |
+| Simplification of minima | `simplify_minima` | this work |
 | Stacks, cuts, F-sequences | `max_extension`, `cut`, `is_f_sequence` | Bertrand, arXiv:2509.01384 |
 | Flooding order | `flooding_order`, `is_flooding_sequence` | Bertrand, arXiv:2509.01384 |
 | Random Morse sequences | `random_morse_sequence` | — |
@@ -143,6 +146,20 @@ No injectivity assumption is made on the data: a plateau is processed as one
 level, the tie-breaking order is used only *inside* a level and never changes
 the stack itself.
 
+## Simplification
+
+Cancelling a minimum with a saddle (Forman's cancellation) reverses a gradient
+path, and the new pairs usually join cells of different values: the field is
+no longer an `F`-sequence field. It becomes one again for an explicit stack,
+`raise_stack`, which fills the region of the minimum below the saddle up to
+the saddle level (dually, `lower_stack` cuts a maximum down to a saddle).
+Cancelling a minimum with a saddle merges exactly two basins.
+
+```python
+from morseq import simplify_minima
+V2, F2, n = simplify_minima(K, V, F, threshold=16)   # persistence < 16 removed
+```
+
 ## Performance
 
 The pipeline of `segment_image` (lower-star gradient, flooding sequence,
@@ -197,6 +214,13 @@ python -m morseq check --shape 6x5 --trials 50
 
 (The `morseq` command is also installed as an executable; `python -m morseq`
 avoids any `PATH` configuration.)
+
+## Paper
+
+The statements implemented here are proved in the paper in [`paper/`](paper/)
+(LNCS format, source and PDF), whose experiments are reproducible with the
+scripts of [`paper/experiments/`](paper/experiments/). To cite the software,
+see [`CITATION.cff`](CITATION.cff).
 
 ## References
 
