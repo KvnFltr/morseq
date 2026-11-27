@@ -29,6 +29,9 @@ from .stacks import (max_extension, is_stack, cut, is_f_sequence,
                      is_flooding_sequence, gradient_from_vertex_map,
                      flooding_order, segment_image, Segmentation)
 from .generators import random_morse_sequence
+from .simplification import (cancel, gradient_path_count, raise_stack,
+                             lower_stack, is_level_flat, vertex_flows,
+                             minimum_saddle_pairs, simplify_minima)
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = [n for n in dir() if not n.startswith("_")]
